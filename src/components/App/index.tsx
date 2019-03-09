@@ -14,6 +14,7 @@ import {AccountPage} from '../Account'
 export const App = () =>
   <Router>
     <div>
+      <h1>Firebase Ready</h1>
       <Navigation />
 
       <hr />
