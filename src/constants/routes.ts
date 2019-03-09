@@ -5,3 +5,13 @@ export const HOME = '/home';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+
+export const ROUTES = {
+  LANDING,
+  SIGN_UP,
+  SIGN_IN,
+  HOME,
+  ACCOUNT,
+  ADMIN,
+  PASSWORD_FORGET
+}
