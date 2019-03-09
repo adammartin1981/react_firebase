@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cc5e032-1cb7-4371-8663-f6133e0112c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Home/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Landing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Account/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PasswordChange/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PasswordForget/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SignIn/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SignUp/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/roles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/roles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,22 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serviceWorker.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/serviceWorker.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/App/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="15" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="390">
+              <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -75,36 +62,61 @@
         <entry file="file://$PROJECT_DIR$/src/components/Home/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <caret line="2" column="21" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roles.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/roles.ts">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PasswordChange/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="45">
+              <caret line="3" column="17" lean-forward="true" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PasswordForget/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/routes.ts">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/SignIn/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            <state relative-caret-position="45">
+              <caret line="3" column="14" selection-end-line="3" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/SignUp/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Account/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Admin/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -124,6 +136,12 @@
         <option value="$PROJECT_DIR$/src/constants/routes.ts" />
         <option value="$PROJECT_DIR$/src/components/Landing/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/Home/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/PasswordChange/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/PasswordForget/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/SignIn/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/SignUp/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Account/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Admin/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/App/index.tsx" />
       </list>
     </option>
@@ -180,6 +198,20 @@
               <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,6 +234,34 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordChange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordForget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SignIn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react_typescript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SignUp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react_typescript" type="b2602c69:ProjectViewProjectNode" />
@@ -245,26 +305,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552143862112</updated>
-      <workItem from="1552143865549" duration="2534000" />
+      <workItem from="1552143865549" duration="2835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2534000" />
+    <option name="totallyTimeSpent" value="2835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="5" weight="0.32954547" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.31532964" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.31532964" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32954547" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -343,6 +403,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Landing/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -356,21 +423,56 @@
     <entry file="file://$PROJECT_DIR$/src/components/Home/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <caret line="2" column="21" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Landing/index.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/PasswordChange/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="true" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PasswordForget/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SignIn/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SignUp/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Account/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="15" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="390">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
