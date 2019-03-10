@@ -1,4 +1,11 @@
+# Original source of tutorial
 https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/
+
+# HOC
+https://medium.com/@jan.hesters/typescript-hoc-higher-order-component-and-decorators-in-react-586787f5a9e7
+https://greatrexpectations.com/2018/08/21/higher-order-components-with-react-typescript/
+
+# Normal CRA stuff below
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
