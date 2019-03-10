@@ -11,7 +11,6 @@ import { SignInPage } from '../SignIn'
 import { PasswordForgetPage } from '../PasswordForget'
 import { AdminPage } from '../Admin'
 import { AccountPage } from '../Account'
-import { FirebaseComponentProps } from '../Firebase/withFirebase'
 import { withAuthenticationProvider } from '../Session'
 import { AuthComponentProps } from '../Session/withAuthentication'
 
