@@ -1,6 +1,5 @@
-import * as app from 'firebase/app'
+import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import firebase from 'firebase'
 
 /**
  * Create a .env file in the root of the project
@@ -25,9 +24,9 @@ export class Firebase {
   private auth: firebase.auth.Auth
 
   constructor() {
-    app.initializeApp(fbConfig)
+    firebase.initializeApp(fbConfig)
 
-    this.auth = app.auth()
+    this.auth = firebase.auth()
   }
 
   public doCreateUserWithEmailAndPassword = (email: string, password: string) =>

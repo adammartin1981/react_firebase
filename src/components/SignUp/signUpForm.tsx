@@ -1,14 +1,14 @@
 import { FormEvent } from 'react'
 import * as React from 'react'
-import { Firebase, withFirebaseCustom } from '../Firebase'
-import firebase from 'firebase'
+import { withFirebaseCustom } from '../Firebase'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 import { ROUTES } from '../../constants/routes'
 import { RouteComponentProps, withRouter } from 'react-router'
 import { compose } from 'recompose'
+import { FirebaseComponentProps } from '../Firebase/context'
 
-interface FormProps extends RouteComponentProps {
-  firebase?: Firebase | null
-}
+interface FormProps extends RouteComponentProps, FirebaseComponentProps {}
 
 interface FormState {
   username?: string
@@ -38,8 +38,12 @@ class SignUpFormBase extends React.Component<FormProps, FormState> {
 
     const { username, email, passwordOne } = this.state
 
-    if (!this.props.firebase) return null
-    if (!email || !passwordOne) return null
+    if (!this.props.firebase) {
+      return this.setState({error: 'Firebase not available'})
+    }
+    if (!email || !passwordOne) {
+      return this.setState({ error: 'Invalid values for submission passed'})
+    }
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
