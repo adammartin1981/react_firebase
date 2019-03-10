@@ -1,2 +1,9 @@
-export { FBConsumer, FBProvider } from './context'
-export { Firebase } from './firebase'
+import { FBConsumer, FBProvider, withFirebaseCustom } from './context'
+import { Firebase } from './firebase'
+
+export {
+  FBConsumer,
+  FBProvider,
+  withFirebaseCustom,
+  Firebase
+}
