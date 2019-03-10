@@ -14,6 +14,9 @@ interface FirebaseComponentProps {
 // TODO Fix better
 // Look at the way to type higher order components
 // Look at using a decorator for this
+// https://github.com/Microsoft/TypeScript/pull/29437
+// https://github.com/Microsoft/TypeScript/issues/28748
+// https://stackoverflow.com/questions/53556160/react-hoc-and-typescript-3-2
 export const withFirebaseCustom = <P extends FirebaseComponentProps>(Component: React.ComponentType<P>) =>
   (props: P): React.ComponentClass<Omit<P, keyof FirebaseComponentProps>> =>
     <FBConsumer>
