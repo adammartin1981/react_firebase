@@ -1,9 +1,24 @@
 import * as React from 'react'
 import {Link} from 'react-router-dom'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 
 import * as ROUTES from '../../constants/routes'
+import { SignOutButton } from '../SignOut'
 
-export const Navigation = () =>
+interface NavigationProps {
+  authUser: firebase.User | null
+}
+
+export const Navigation: React.FunctionComponent<NavigationProps> = ({authUser}) =>
+  <div>
+    {authUser ?
+      <NavigationAuth/> :
+      <NavigationNonAuth/>
+    }
+  </div>
+
+export const NavigationNonAuth = () =>
   <div>
     <ul>
       <li>
@@ -12,6 +27,12 @@ export const Navigation = () =>
       <li>
         <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
       </li>
+    </ul>
+  </div>
+
+export const NavigationAuth = () =>
+  <div>
+    <ul>
       <li>
         <Link to={ROUTES.LANDING}>Landing</Link>
       </li>
@@ -23,6 +44,9 @@ export const Navigation = () =>
       </li>
       <li>
         <Link to={ROUTES.ADMIN}>Admin</Link>
+      </li>
+      <li>
+        <SignOutButton/>
       </li>
     </ul>
   </div>

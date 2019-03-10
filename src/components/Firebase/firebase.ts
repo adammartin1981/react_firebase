@@ -21,7 +21,7 @@ const fbConfig = {
 };
 
 export class Firebase {
-  private auth: firebase.auth.Auth
+  public auth: firebase.auth.Auth
 
   constructor() {
     firebase.initializeApp(fbConfig)
@@ -35,8 +35,9 @@ export class Firebase {
   public doSignInWithEmailAndPassword = (email: string, password: string) =>
     this.auth.signInWithEmailAndPassword(email, password)
 
-  public doSignOut = () =>
-    this.auth.signOut()
+  public doSignOut = () => {
+    this.auth.signOut().then(() => {})
+  }
 
   public doPasswordReset = (email: string) =>
     this.auth.sendPasswordResetEmail(email)
