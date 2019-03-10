@@ -6,7 +6,7 @@ import 'firebase/auth'
 import { ROUTES } from '../../constants/routes'
 import { RouteComponentProps, withRouter } from 'react-router'
 import { compose } from 'recompose'
-import { FirebaseComponentProps } from '../Firebase/context'
+import { FirebaseComponentProps } from '../Firebase/withFirebase'
 
 interface FormProps extends RouteComponentProps, FirebaseComponentProps {}
 

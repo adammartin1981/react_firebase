@@ -1,24 +1,27 @@
 import * as React from 'react'
 import {Link} from 'react-router-dom'
-import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 import * as ROUTES from '../../constants/routes'
 import { SignOutButton } from '../SignOut'
+import { AuthUserContext } from '../Session';
 
-interface NavigationProps {
-  authUser: firebase.User | null
-}
+interface NavigationProps {}
 
-export const Navigation: React.FunctionComponent<NavigationProps> = ({authUser}) =>
+// Copying the tutorial, but this seems stupid.
+// Why not just either pass it through - or make this a HOC? and wrap it in the withAuth???
+// the withAuth feels like it's cocked
+export const Navigation: React.FunctionComponent<NavigationProps> = () =>
   <div>
-    {authUser ?
-      <NavigationAuth/> :
-      <NavigationNonAuth/>
-    }
+    <AuthUserContext.Consumer>
+      {authUser => authUser ?
+        <NavigationAuth/> :
+        <NavigationNonAuth/>
+      }
+    </AuthUserContext.Consumer>
   </div>
 
-export const NavigationNonAuth = () =>
+const NavigationNonAuth = () =>
   <div>
     <ul>
       <li>
@@ -30,7 +33,7 @@ export const NavigationNonAuth = () =>
     </ul>
   </div>
 
-export const NavigationAuth = () =>
+const NavigationAuth = () =>
   <div>
     <ul>
       <li>

@@ -1,9 +1,10 @@
-import { FirebaseComponentProps, withFirebaseCustom } from '../Firebase/context'
+import { withFirebaseCustom } from '../Firebase'
 import * as React from 'react'
 import { compose } from "recompose"
 import { FormEvent } from 'react'
 import { RouteComponentProps, withRouter } from 'react-router'
 import { ROUTES } from '../../constants/routes'
+import { FirebaseComponentProps } from '../Firebase/withFirebase'
 
 interface SignInProps extends FirebaseComponentProps, RouteComponentProps {}
 
