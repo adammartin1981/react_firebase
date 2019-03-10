@@ -43,7 +43,7 @@ export class Firebase {
     this.auth.sendPasswordResetEmail(email)
 
   public doPasswordUpdate = (password: string) => {
-    if (!this.auth.currentUser) return null // Do error here
+    if (!this.auth.currentUser) throw new Error('Unable to reset current user') // Do error here
 
     return this.auth.currentUser.updatePassword(password)
   }
