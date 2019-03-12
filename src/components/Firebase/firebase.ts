@@ -1,5 +1,6 @@
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/database'
 
 /**
  * Create a .env file in the root of the project
@@ -22,11 +23,13 @@ const fbConfig = {
 
 export class Firebase {
   public auth: firebase.auth.Auth
+  public db: firebase.database.Database
 
   constructor() {
     firebase.initializeApp(fbConfig)
 
     this.auth = firebase.auth()
+    this.db = firebase.database()
   }
 
   public doCreateUserWithEmailAndPassword = (email: string, password: string) =>
@@ -47,4 +50,8 @@ export class Firebase {
 
     return this.auth.currentUser.updatePassword(password)
   }
+
+  public user = (userId: string) => this.db.ref(`users/${userId}`)
+
+  public users = () => this.db.ref(`users/`)
 }

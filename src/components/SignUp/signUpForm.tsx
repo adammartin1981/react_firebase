@@ -1,12 +1,13 @@
 import { FormEvent } from 'react'
 import * as React from 'react'
-import { withFirebaseCustom } from '../Firebase'
+import { Firebase, withFirebaseCustom } from '../Firebase'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import { ROUTES } from '../../constants/routes'
 import { RouteComponentProps, withRouter } from 'react-router'
 import { compose } from 'recompose'
 import { FirebaseComponentProps } from '../Firebase/withFirebase'
+import { History } from 'history'
 
 interface FormProps extends RouteComponentProps, FirebaseComponentProps {}
 
@@ -27,6 +28,7 @@ const INITIAL_STATE: FormState = {
 }
 
 class SignUpFormBase extends React.Component<FormProps, FormState> {
+  public state: FormState
 
   constructor(props: FormProps) {
     super(props)
@@ -34,38 +36,48 @@ class SignUpFormBase extends React.Component<FormProps, FormState> {
     this.state = { ...INITIAL_STATE }
   }
 
-  onSubmit = (event: FormEvent) => {
+  public onSubmit = (event: FormEvent): void => {
+    const { email, passwordOne } = this.state
 
-    const { username, email, passwordOne } = this.state
-
-    if (!this.props.firebase) {
-      return this.setState({error: 'Firebase not available'})
-    }
     if (!email || !passwordOne) {
       return this.setState({ error: 'Invalid values for submission passed'})
     }
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
-      .then((authUser: firebase.auth.UserCredential) => {
-        this.setState({...INITIAL_STATE})
-        this.props.history.push(ROUTES.HOME)
-      })
+      .then(this.setUser)
+      .then(this.resetAndGoHome)
       .catch((error: Error) => {
         this.setState({ error })
       })
 
     event.preventDefault()
-
   }
 
-  onChange = (event: FormEvent) => {
+  private setUser = (authUser: firebase.auth.UserCredential): Promise<any> => {
+    if (!authUser.user) throw new Error('Unable to retrieve stored user')
+
+    const { email, username } = this.state
+
+    return this.props.firebase.user(authUser.user.uid)
+      .set({
+        username,
+        email
+      })
+  }
+
+  private resetAndGoHome = () => {
+    this.setState({...INITIAL_STATE})
+    this.props.history.push(ROUTES.HOME)
+  }
+
+  public onChange = (event: FormEvent) => {
     // Fix later on
     // @ts-ignore
     this.setState({[event.target.name]: event.target.value })
   }
 
-  render() {
+  public render() {
     const {
       username,
       email,

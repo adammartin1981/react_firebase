@@ -7,37 +7,27 @@ import 'firebase/auth'
 import { withFirebaseCustom } from '../Firebase'
 import * as ROUTES from '../../constants/routes';
 import { FirebaseComponentProps } from '../Firebase/withFirebase'
+import { AuthUserConsumer } from './context'
 
-interface WithAuthorizationProps extends FirebaseComponentProps, RouteComponentProps {}
+export interface WithAuthorizationProps extends FirebaseComponentProps, RouteComponentProps {
+  authUser: firebase.User
+}
 
 export const withAuthorization = (condition:(user: firebase.User | null) => boolean) =>
-  <P extends WithAuthorizationProps>(Component: React.ComponentClass<P> | React.FunctionComponent<P>): React.ComponentClass<P> => {
+  <P extends WithAuthorizationProps>(Component: React.ComponentType<P>): React.ComponentClass<P> => {
 
-  class WithAuthorization extends React.Component<P, { isLoadingUser: boolean }> {
+  class WithAuthorization extends React.Component<P> {
     private listener: firebase.Unsubscribe = () => {}
 
     constructor(props: P) {
       super(props)
-      
-      this.state = {
-        isLoadingUser: false
-      }
     }
 
     componentDidMount() {
       if (!this.props.firebase) return
-      if (!this.props.firebase.auth.currentUser) {
-        this.setState({
-          isLoadingUser: true
-        })
-      }
 
       this.listener = this.props.firebase.auth.onAuthStateChanged(
         (authUser: firebase.User | null) => {
-          this.setState({
-            isLoadingUser: false
-          })
-
           if (!condition(authUser)) {
             this.props.history.push(ROUTES.SIGN_IN)
           }
@@ -51,13 +41,16 @@ export const withAuthorization = (condition:(user: firebase.User | null) => bool
 
     render() {
       return (
-        !this.state.isLoadingUser && <Component {...this.props} />
+        <AuthUserConsumer>
+          {
+            authUser => condition(authUser) ? <Component {...this.props} authUser={authUser} /> : null
+          }
+        </AuthUserConsumer>
       )
     }
   }
 
-  // Look at later
-  return compose<P, any>(
+  return compose<P, P>(
     withRouter,
     withFirebaseCustom,
   )(WithAuthorization)

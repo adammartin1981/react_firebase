@@ -5,14 +5,14 @@ import { withAuthorization } from '../Session'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import { WithAuthorizationProps } from '../Session/withAuthorization'
 
-const AccountPageBase = () => (
+const AccountPageBase = (props: WithAuthorizationProps) =>
   <div>
-    <h1>Account Page</h1>
-    <PasswordForgetForm />
-    <PasswordChangeForm />
+    <h1>Account Page: { props.authUser.email } </h1>
+    <PasswordForgetForm/>
+    <PasswordChangeForm/>
   </div>
-)
 
 const condition = (authUser: firebase.User | null) => !!authUser
 

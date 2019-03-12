@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { AuthUserContext } from './context'
+import { AuthUserProvider } from './context'
 import { withFirebaseCustom } from '../Firebase'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -63,8 +63,8 @@ export interface AuthComponentProps extends FirebaseComponentProps {
 
 // Worked out - can't type it as it's not a conventional HOC
 export const withAuthenticationProvider =
-  (Component: React.ComponentClass<FirebaseComponentProps> | React.FunctionComponent<FirebaseComponentProps>) => {
-  class WithAuthentication extends React.Component<FirebaseComponentProps, AuthState> {
+  (Component: React.ComponentClass<AuthComponentProps> | React.FunctionComponent<AuthComponentProps>) => {
+  class WithAuthentication extends React.Component<AuthComponentProps, AuthState> {
     private listener: firebase.Unsubscribe = () => {}
 
     constructor(props: AuthComponentProps) {
@@ -92,9 +92,9 @@ export const withAuthenticationProvider =
 
     render() {
       return (
-        <AuthUserContext.Provider value={this.state.authUser}>
+        <AuthUserProvider value={this.state.authUser}>
           <Component {...this.props} />
-        </AuthUserContext.Provider>
+        </AuthUserProvider>
       )
     }
   }
