@@ -13,6 +13,7 @@ import { AdminPage } from '../Admin'
 import { AccountPage } from '../Account'
 import { withAuthenticationProvider } from '../Session'
 import { AuthComponentProps } from '../Session/withAuthentication'
+import { Counter } from '../Counter/counter'
 
 interface AppProps extends AuthComponentProps {}
 
@@ -26,6 +27,7 @@ const AppBase: React.FunctionComponent<AppProps> = () =>
       <Route exact path={ROUTES.LANDING} component={LandingPage}/>
       <Route path={ROUTES.HOME} component={HomePage}/>
       <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
+      <Route path={ROUTES.COUNTER} component={Counter}/>
       <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
       <Route path={ROUTES.ACCOUNT} component={AccountPage}/>

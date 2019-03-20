@@ -5,6 +5,7 @@ export const HOME = '/home';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+export const COUNTER = '/counter';
 
 export const ROUTES = {
   LANDING,
@@ -13,5 +14,6 @@ export const ROUTES = {
   HOME,
   ACCOUNT,
   ADMIN,
-  PASSWORD_FORGET
+  PASSWORD_FORGET,
+  COUNTER
 }

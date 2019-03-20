@@ -27,6 +27,9 @@ const NavigationNonAuth = () =>
       <li>
         <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
       </li>
+      <li>
+        <Link to={ROUTES.COUNTER}>Counter Experiment</Link>
+      </li>
     </ul>
   </div>
 
